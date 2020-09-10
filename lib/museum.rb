@@ -1,8 +1,9 @@
 class Museum
-  attr_reader :name, :exhibits
+  attr_reader :name, :exhibits, :patrons
   def initialize(name)
-    @name = name
+    @name     = name
     @exhibits = []
+    @patrons  = []
   end
 
   def add_exhibit(exhibit)
@@ -22,10 +23,12 @@ class Museum
       @exhibits.each do |exhibit|
         recommend_exhibits << exhibit if exhibit.name == name
       end
-
     end
     recommend_exhibits
-    # require "pry"; binding.pry
+  end
+
+  def admit(patron)
+    @patrons << patron
   end
 
 end
