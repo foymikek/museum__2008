@@ -32,7 +32,13 @@ class Museum
   end
 
   def patrons_by_exhibit_interest
-
+    require "pry"; binding.pry
+    patrons_by_exhibit_interest = {}
+    @exhibits.each do |exhibit|
+      if patrons_by_exhibit_interest[:exhibit].nil?
+        patrons_by_exhibit_interest[:exhibit] = a
+      end
+    end
   end
 
 end
